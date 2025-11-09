@@ -3,38 +3,34 @@ const decreaseBtn = document.getElementById("decrBtn");
 const resetBtn = document.getElementById("rBtn");
 const counter = document.getElementById("counter");
 
-
 let count = 0;
 
-function updateCounter(){
+function updateCounter() {
   counter.textContent = count;
+
+  if(count > 5) {counter.style.backgroundColor = "red";}
+else if(count < 3) {
+  counter.style.backgroundColor = "Blue"
+} else {counter.style.backgroundColor = "yellow"}
 }
 
 increaseBtn.addEventListener("click", () => {
-  count++
+  count++;
   updateCounter();
 });
+
 
 decreaseBtn.addEventListener("click", () => {
-  count--;
-  updateCounter();
+  if (count > 0) {
+    count--;
+    updateCounter();
+  }
 });
 
-resetBtn.addEventListener("click", () =>{
+resetBtn.addEventListener("click", () => {
   count = 0;
   updateCounter();
-})
-
-
-
-
-
-
-
-
-
-
-
+});
 
 // let count = 0;
 

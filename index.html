@@ -4,14 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter App</title>
-    <link rel="stylesheet" href="stylle.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div>
-      <h2 id="counter">0</h2>
-      <button id="incrBtn">Increase</button>
-      <button id="decrBtn">Decrease</button>
-      <button id="rBtn">Reset</button>
+  <body class="flex items-center justify-center min-h-screen bg-purple-300">
+    <div class="bg-white shadow-lg rounded-xl p-5 text-center space-y-7 w-72">
+      <h2 id="counter" class="font-bold text-3xl text-blue-700">0</h2>
+
+      <div class="flex justify-center gap-4">
+        <button
+          class="border p-2 rounded-xl bg-blue-300 text-lg text-white"
+          id="incrBtn"
+        >
+          Increase
+        </button>
+        <button
+          id="decrBtn"
+          class="border p-2 rounded-xl bg-blue-300 text-lg text-white"
+        >
+          Decrease
+        </button>
+        <button
+          id="rBtn"
+          class="border p-2 rounded-xl bg-blue-300 text-lg text-white"
+        >
+          Reset
+        </button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
