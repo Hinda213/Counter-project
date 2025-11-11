@@ -3,9 +3,10 @@ const decreaseBtn = document.getElementById("decrBtn");
 const resetBtn = document.getElementById("rBtn");
 const counter = document.getElementById("counter");
 
-let count = 0;
+ let count = 0;
 
 function updateCounter() {
+ 
   counter.textContent = count;
 
   if(count > 5) {counter.style.backgroundColor = "red";}
@@ -21,6 +22,7 @@ increaseBtn.addEventListener("click", () => {
 
 
 decreaseBtn.addEventListener("click", () => {
+  count = Math.max(0, count-1)
   if (count > 0) {
     count--;
     updateCounter();
@@ -31,6 +33,8 @@ resetBtn.addEventListener("click", () => {
   count = 0;
   updateCounter();
 });
+updateCounter();
+  // updateCounter();
 
 // let count = 0;
 
